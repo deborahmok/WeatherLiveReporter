@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>LoginPage</title>
+	<link rel="stylesheet" href="login.css">
+</head>
+
+	<body>
+		<nav class="navbar">
+			<ul class="menu">
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+		</nav>
+		
+		<div class="background"></div>
+		
+		<form action="LoginServlet" method="POST">
+			<img src="Keychain_Locked.png" alt="Logo" class="keychainIcon">
+	
+			<div class="loginBackground"></div>
+			
+			<label class="username">
+				Username
+			</label>
+			<input type="username" name = "username" placeholder="Enter username" class="usernameInput" required>
+			
+			<label class="password">
+				Password
+			</label>
+			<input type="password" name = "password" placeholder="Enter password" class="passwordInput" required>
+			
+			<div class="buttonContainer">
+				<input class="button" type="submit" value="Login">
+			</div>
+		</form>
+		
+		<script src="login.js"></script>
+	</body>
+
+</html>

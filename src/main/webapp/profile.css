@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+body {
+    position: relative;
+    z-index: 1;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: blur(5px); 
+	background-image: url('background.jpg'); 
+ 	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+
+.navbar {
+  background-color: #000;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Arial;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 15%;
+    margin-left: 35%;
+    color: white;
+    font-family: Arial;
+}
+
+.searchHistoryContainer {
+    margin: 0 auto;
+    width: 35%;
+    background: rgba(244, 244, 244, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.search-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+}
+
+.search-history-table th, 
+.search-history-table td {
+    border: 1px solid white;
+    padding: 12px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.search-history-table th {
+    background-color: #444;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.query-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.query-button:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+body {
+    position: relative;
+    z-index: 1;
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: blur(5px); 
+	background-image: url('background.jpg'); 
+ 	background-size: cover;
+	background-position: center;
+	z-index: -1;
+} 
+
+.navbar {
+  background-color: #000;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.keychainIcon {
+	position: fixed;
+	top: 27%;
+	left: 47%;
+	width: 7%;
+	z-index: 2;
+	height: auto;
+}
+
+.loginBackground {
+	position: absolute;
+	top: 50%; 
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 250px;
+	height: 300px;
+	padding: 20px;
+	margin-top: 30%;
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(20px);
+	border-radius: 10px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.username {
+	position: absolute;
+	top: 50%; 
+	left: 47%;
+	font-family: arial;
+	color: white;
+	margin-top: 24%;
+	font-size: 18px;
+}
+
+.usernameInput {
+	position: absolute;
+	padding: 10px 10px;
+	top: 50%; 
+	left: 42%;
+	font-family: arial;
+	margin-top: 26%;
+	width: 220px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(30px);
+	border: none;
+}
+
+.password {
+	position: absolute;
+	top: 50%; 
+	left: 47%;
+	font-family: arial;
+	color: white;
+	margin-top: 30%;
+	font-size: 18px;
+}
+
+.passwordInput {
+	position: absolute;
+	padding: 10px 10px;
+	top: 50%; 
+	left: 42%;
+	font-family: arial;
+	margin-top: 32%;
+	width: 220px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(30px);
+	border: none;
+}
+
+.buttonContainer {
+	position: absolute;
+	top: 50%; 
+	left: 42%;
+	margin-top: 37%;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+}
+
+.button {
+	cursor: pointer;
+	background-color: #ffcb01;
+	color: black;
+	font-size: 18px;
+	padding: 10px 20px;
+	width: 240px;
+	border: none;
+	border-radius: 5px;
+}

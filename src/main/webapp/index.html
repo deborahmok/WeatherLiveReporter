@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CitySearch</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>		
+	<div class="background"></div>
+	
+	<form id="searchForm">
+	
+		<nav class="navbar" id="navbar">
+			<ul class="menu">
+	            <li><a href="login.html">Login</a></li>
+	            <li><a href="register.html">Register</a></li>
+	        </ul>
+		</nav>
+		
+		<img src="logo.png" alt="Logo" class="logo">
+		
+		<div class="searchContainer" id="searchContainerCity">
+			<textarea class="locationInput cityInput" id="locationInput" name="locationInput" rows="1" cols="70" placeholder="Los Angeles, CA" required></textarea>
+			<img src="magnifying_glass.jpeg" class="searchIcon">	
+		</div>
+		
+		<div class="searchContainer" id="searchContainerLatLong" style="display: none;">
+			<input type="text" placeholder="Latitude" class="locationInput latInput">
+			<input type="text" placeholder="Longitude" class="locationInput longInput">
+			
+			<button class="mapButton" onclick="openMap(event)">
+				<img src="MapIcon.png" alt="Map Icon" class="mapIcon">
+			</button>
+		</div>
+			
+		<div class="choiceContainer" id="choiceContainer">
+			<label id="cityChoice" for="choiceCity">
+				<input type="radio" id="choiceCity" name="userChoices" value="cityPage.html" checked> City
+			</label>
+			
+			<label id="latChoice" for="choiceLatLong">
+				<input type="radio" id="choiceLatLong" name="userChoices" value="LatLongPage.html"> Lat/Long
+			</label>
+		 </div>
+		
+		<div class="buttonContainer" id="buttonContainer">
+				<input class="button" type="submit" value="Display All">
+		</div>
+		
+		<div class="searchResult" style="display: none;">
+			<div class="firstResult">
+				<div class="iconWithText">
+		            <img src="earth.png" class="earthIcon">
+		            <span>Location</span>
+		        </div>
+		        <div class="iconWithText">
+		            <img src="snowflake.png" class="snowflakeIcon">
+		            <span>Temp Low</span>
+		        </div>
+		        <div class="iconWithText">
+		            <img src="sun.png" class="sunIcon">
+		            <span>Temp High</span>
+		        </div>
+		        <div class="iconWithText">
+		            <img src="wind.png" class="windIcon">
+		            <span>Wind</span>
+		        </div>
+			</div>
+			
+			<div class="secondResult">
+				<div class="iconWithText">
+		            <img src="drop.png" class="dropIcon">
+		            <span>Humidity</span>
+		        </div>
+		        <div class="iconWithText">
+		            <img src="coordinates.png" class="coordinatesIcon">
+		            <span>Coordinates</span>
+		        </div>
+		        <div class="iconWithText">
+		            <img src="temp.png" class="tempIcon">
+		            <span>Current Temp</span>
+		        </div>
+		        <div class="iconWithText">
+		            <img src="sunrise.png" class="sunriseIcon">
+		            <span>Sunrise/set</span>
+        		</div>
+			</div>
+		</div>
+		
+		<div class="searchResultCity" style="display: none;">
+		    <div class="headerRow">
+		        <h2>All Cities</h2>
+		        <div class="sortOptions">
+		            <label for="sortBy" style="font-family: Arial;">Sort by:</label>
+		            <select id="sortBy">
+		                <option value="tempLowDesc">Temp Low DESC</option>
+		                <option value="cityNameAsc">City Name A-Z</option>
+		                <option value="cityNameDesc">City Name Z-A</option>
+		                <option value="tempLowAsc">Temp Low ASC</option>
+		                <option value="tempHighAsc">Temp High ASC</option>
+		                <option value="tempHighDesc">Temp High DESC</option>
+		            </select>
+		        </div>
+		    </div>
+		    <table class="cityTable">
+		        <thead>
+		            <tr>
+		                <th>City Name</th>
+		                <th>Temp. Low</th>
+		                <th>Temp. High</th>
+		            </tr>
+		        </thead>
+		        <tbody id="cityTableBody">
+		            
+		        </tbody>
+		    </table>
+		</div>
+	</form>
+	
+	<div class="map-overlay">
+	    <div class="map-background"></div>
+	    <div class="map-container">
+	        <div id="map"></div>
+	    </div>
+	</div>
+	
+	<script src="index.js"></script>
+	<script src="script.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCgEzRttU9slim3Sx0LpTW67HmCjji2tM&callback=initMap"></script>
+</body>
+
+</html>
