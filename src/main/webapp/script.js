@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 	
 	const fetchWeatherByLatLong = (lat, lon) => {
-        const API_KEY = "5fcc55fa53f4ecf99567b2acf3f0f4f7";
+        const API_KEY = "(openWeatherAPIKey)";
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
 
         return fetch(apiUrl)
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 	
 	const fetchCitiesAndUpdateTable = (cityInput) => {
-	    const API_KEY = "5fcc55fa53f4ecf99567b2acf3f0f4f7";
+	    const API_KEY = "(openWeatherAPIKey)";
 	    const geoApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityInput}&limit=5&appid=${API_KEY}`;
 
 	    fetch(geoApiUrl)
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 	
 	const fetchWeatherByCityName = (cityInput) => {
-	    const API_KEY = "5fcc55fa53f4ecf99567b2acf3f0f4f7";
+	    const API_KEY = "(openWeatherAPIKey)";
 	    const geoApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityInput}&limit=1&appid=${API_KEY}`; //this one is 1 result
 
 	    fetch(geoApiUrl)
